@@ -1,0 +1,6 @@
+colorlover==0.2.1
+tqdm==4.28.1
+pandas==0.23.4
+plotly==3.4.1
+ipython==7.1.1
+protobuf==3.6.1
