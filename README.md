@@ -1,57 +1,51 @@
+[CEI]:https://www.college-de-france.fr/site/centre-economie-innovation/index.htm
+[GHissues]:https://github.com/cverluise/openPatstat/issues
+[GHpulls]:https://github.com/cverluise/openPatstat/pulls
+[GHOP]:https://github.com/cverluise/openPatstat
+[GBOP]:https://cyril-verluise.gitbook.io/open-patstat/
+[GBlogo]: https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwi269Gt8vHeAhWMz4UKHRrXAEkQjRx6BAgBEAU&url=https%3A%2F%2Ftwitter.com%2Fgitbookio&psig=AOvVaw3qrY-UcmDrgPTuMh6jGY0b&ust=1543316020829708
+
+# Statement
+
+The purpose of this project is to help disseminate Statistical Data on Patents (so called PatStat) 
+to stimulate research on Patents and Innovation. To do so, we provide tools to load, build and explore 
+this data using Google Cloud Platform. Google Cloud Platform offers a simple, yet powerful Big Data 
+environment. 
+
+This is an open source project hosted by the [Economics of Innovation ​Research Lab][CEI] at the Collège de France.
+This is also meant to provide a place for sharing codes and good practices. Please, send [pull requests][GHpulls] and 
+[issues][GHissues] directly to the [dedicated GitHub repository][https://github.com/cverluise/openPatstat]. 
+
+> <font color='orange'>Version 0.1: This is a development release. Some features might be changed in backward-incompatible ways.</font>
+
+# Documentation
+
+[![alt text](https://gitlab.com/uploads/-/system/project/avatar/1058960/gitbook.png "Logo Title Text 1")][GBOP]
+
+Please, visit our [GitBook][GBOP] for full documentation, examples and resources.   
 
 
-# First words
+# Installation 
 
-The purpose of this project is to help disseminate Statistical Data on Patents (so called PatStat) by providing tools to
-explore these data using Google Cloud Platform, a simple, yet powerful Big Data environment. This is a development release,
-comments and remarks are most welcome. We also provide exploratory data analysis notebooks.
+## Clone/ Download the openPatstat repository
 
-Basically, this library can be divided into 3 parts:
+### Git
 
-- Data loading from local to Google Cloud Storage: `mp_pcu_gcs.py` (command line). It implements a multiprocessing layer on top of the 
-`parallel composite upload` from `gsutil`. This might well save you a lot of time. Read full documentation: `python mp_pcu_gcs.py --help`.
-<font color=red>WARNING: non mac-users might be unable to run the parallel composite upload.</font>
+```bash
+cd destination/path
+git clone https://github.com/cverluise/openPatstat.git
+````
 
-- Project management for BigQuery: `buildPatstat.py`. Loads data from Google Cloud Storage and builds tables in you BigQuery
-project. Note that we did not write it as a "build from scratch" so far (it might well be the case in future release). Users are thus kindly 
-invited to adapt our code to their own needs. It is based on our `gcp` utils which are themselves built on top of the Google 
-Cloud Python client API. Users planning to manage their BigQuery Project from the Python API could find this utils library useful.
+### Download
 
-- Exploratory analysis: the `open_patstat` package provides a short documentation library
-for PatStat tables and variables and a library of plots that where found useful when exploring PatStat (on top of Plotly). The documentation was originally parsed from 
-the official EPO Data Catalog - completeness is not guaranteed. Notebooks `tls*` provide practical examples of how they can be used together with exploratory 
-data analysis.
+1. Go to the [Open Patstat GitHub repository][GHOP]​
+2. Click `Clone` or Download (top right)
+3. Click `Download ZIP`
 
+## Install the open_pastat python module
 
-# Install
-
-```
+```bash
 cd path/to/open_patstat
+pip install -r requirements.txt
 pip install -e .
 ```
-
-# Tree
-
-```shell
-.
-├── LICENSE.txt
-├── README.md
-├── __init__.py
-├── __pycache__
-├── documentation
-│   ├── __pycache__
-│   └── shortdoc.py
-├── patstat2016a_doc_api.pickle
-├── plots.py
-├── requirements.txt
-├── setup.py
-└── utils
-    ├── __init__.py
-    ├── __pycache__
-    ├── gcp.py
-    └── schema.py
-```
-
-# What next
-
-This is a development release, everything remains to be made.  
