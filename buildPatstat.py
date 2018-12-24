@@ -56,3 +56,16 @@ create_table(client,
 table_ref = dataset_ref.table('tls224')
 job_config.schema = Schema().tls224
 load_gcs_file(client, 'gs://cellar-patstat/tls224_*.txt', table_ref, job_config)
+
+# # Create and populate tls202
+
+create_table(client,
+             dataset_id='raw',
+             table_id='tls202',
+             schema=Schema().tls202)
+
+table_ref = dataset_ref.table('tls202')
+job_config.schema = Schema().tls202
+load_gcs_file(client, 'gs://cellar-patstat/tls202_part01.txt', table_ref, job_config)
+load_gcs_file(client, 'gs://cellar-patstat/tls202_part02.txt', table_ref, job_config)
+load_gcs_file(client, 'gs://cellar-patstat/tls202_part03.txt', table_ref, job_config)

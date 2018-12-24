@@ -85,6 +85,11 @@ class Schema:
             bigquery.SchemaField('cpc_position', STR, NULL, None, ()),
             bigquery.SchemaField('cpc_gener_auth', STR, NULL, None, ()),
         ]
+        self.tls202 = [
+            bigquery.SchemaField('appln_id', INT, REQ, None, ()),
+            bigquery.SchemaField('appln_title_lg', STR, NULL, None, ()),
+            bigquery.SchemaField('appln_title', STR, NULL, None, ()),
+        ]
         self.date_utils = [
             bigquery.SchemaField('date', DAT, NULL, None, ()),
             bigquery.SchemaField('year', INT, NULL, None, ())

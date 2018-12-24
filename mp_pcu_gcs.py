@@ -9,7 +9,7 @@ from open_patstat.utils.gcp import parallel_upload_gcs
 parser = argparse.ArgumentParser()
 parser.description = "Implements multi-processing on top of the gsutil parallel composite upload. Recommended for Mac " \
                      "users but might fail for others. See gsutil help for more on that. Ex: python " \
-                     "mp_pcu_mp_pcu_gcs.py gs://cellar-patstat $PWD/data/ tls206"
+                     "mp_pcu__gcs.py gs://cellar-patstat $PWD/data/ tls206"
 parser.add_argument('bucket', help='The gcs destination bucket. Ex: gs://my_bucket.', type=str)
 parser.add_argument('directory', help='Path to your local file. Ex: path/to/my/file.', type=str)
 parser.add_argument('pattern',

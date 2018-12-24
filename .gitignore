@@ -8,3 +8,5 @@ patstat2016a-6f31141aa328.json
 helloPaststatFromGC.ipynb
 bq_support.md
 BigQuery_PythonClientAPI_101.ipynb
+*_old*
+*__pycache__/

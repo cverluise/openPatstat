@@ -3,7 +3,7 @@
 [GHpulls]:https://github.com/cverluise/openPatstat/pulls
 [GHOP]:https://github.com/cverluise/openPatstat
 [GBOP]:https://cyril-verluise.gitbook.io/open-patstat/
-[GBlogo]: https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwi269Gt8vHeAhWMz4UKHRrXAEkQjRx6BAgBEAU&url=https%3A%2F%2Ftwitter.com%2Fgitbookio&psig=AOvVaw3qrY-UcmDrgPTuMh6jGY0b&ust=1543316020829708
+[GBlogo]:https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwi269Gt8vHeAhWMz4UKHRrXAEkQjRx6BAgBEAU&url=https%3A%2F%2Ftwitter.com%2Fgitbookio&psig=AOvVaw3qrY-UcmDrgPTuMh6jGY0b&ust=1543316020829708
 
 # Statement
 
@@ -14,7 +14,7 @@ environment.
 
 This is an open source project hosted by the [Economics of Innovation ​Research Lab][CEI] at the Collège de France.
 This is also meant to provide a place for sharing codes and good practices. Please, send [pull requests][GHpulls] and 
-[issues][GHissues] directly to the [dedicated GitHub repository][https://github.com/cverluise/openPatstat]. 
+[issues][GHissues] directly to the [dedicated GitHub repository][GHOP]. 
 
 > <font color='orange'>Version 0.1: This is a development release. Some features might be changed in backward-incompatible ways.</font>
 
