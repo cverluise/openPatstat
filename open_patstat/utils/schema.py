@@ -90,6 +90,13 @@ class Schema:
             bigquery.SchemaField('appln_title_lg', STR, NULL, None, ()),
             bigquery.SchemaField('appln_title', STR, NULL, None, ()),
         ]
+        self.tls2012_wordcount = [
+            bigquery.SchemaField('appln_title_lg', STR, NULL, None, ()),
+            bigquery.SchemaField('appln_auth', STR, NULL, None, ()),
+            bigquery.SchemaField('year', INT, NULL, None, (),),
+            bigquery.SchemaField('word', STR, NULL, None, ()),
+            bigquery.SchemaField('count', INT, NULL, None, ()),
+        ]
         self.date_utils = [
             bigquery.SchemaField('date', DAT, NULL, None, ()),
             bigquery.SchemaField('year', INT, NULL, None, ())

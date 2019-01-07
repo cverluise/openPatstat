@@ -2,7 +2,7 @@
 [GHissues]:https://github.com/cverluise/openPatstat/issues
 [GHpulls]:https://github.com/cverluise/openPatstat/pulls
 [GHOP]:https://github.com/cverluise/openPatstat
-[GBOP]:https://cyril-verluise.gitbook.io/open-patstat/
+[GBOP]:https://economics-of-innovation-lab.gitbook.io/open-patstat/
 [GBlogo]:https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwi269Gt8vHeAhWMz4UKHRrXAEkQjRx6BAgBEAU&url=https%3A%2F%2Ftwitter.com%2Fgitbookio&psig=AOvVaw3qrY-UcmDrgPTuMh6jGY0b&ust=1543316020829708
 
 # Statement

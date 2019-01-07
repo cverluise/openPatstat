@@ -10,3 +10,8 @@ bq_support.md
 BigQuery_PythonClientAPI_101.ipynb
 *_old*
 *__pycache__/
+tls2012_wordCount.ipynb
+Untitled.ipynb
+wordCount/stopwords.txt
+wordCount/stopwords_lem.txt
+wordCount/stopwords_tmp.txt

@@ -19,8 +19,8 @@ def bar_chart(series: pd.Series, colors: str = 'Blues', **kwargs):
 
     Args:
         series: pd.Series
-        colors: color-scale from the colorlover package. Argument should be taken from available token in cl.flipper(
-        )['seq']
+        colors: color-scale from the colorlover package. Argument should be taken from available
+        token in cl.flipper()['seq']
         **kwargs: keyworded arguments that will be passed to go.Layout
 
     Returns: go.Figure object that can be displayed, saved, etc
@@ -36,7 +36,8 @@ def bar_chart(series: pd.Series, colors: str = 'Blues', **kwargs):
     return go.Figure(data, layout)
 
 
-def stacked_bar_chart(df: pd.DataFrame, clusters: str, values: str, colors: tuple = ('seq', 'Blues'), **kwargs):
+def stacked_bar_chart(df: pd.DataFrame, clusters: str, values: str,
+                      colors: tuple = ('seq', 'Blues'), **kwargs):
     """
     Returns a stacked bar chart from a pd.DataFrame with:
         x-axis defined by the index
@@ -47,8 +48,8 @@ def stacked_bar_chart(df: pd.DataFrame, clusters: str, values: str, colors: tupl
         df: pd.DataFrame
         clusters: str specifying the clustering variable
         values: str specifying the values variable
-        colors: color-scale from the colorlover package. Argument should be taken from available token in cl.flipper(
-        )['seq']
+        colors: color-scale from the colorlover package. Argument should be taken from available
+        token in cl.flipper()['seq']
         **kwargs: keyworded arguments that will be passed yo go.Layout
 
     Returns: go.Figure object that can be displayed, saved, etc
@@ -86,8 +87,8 @@ def pie_chart(series: pd.Series, colors: tuple = ('div', 'RdYlBu'), **kwargs):
 
     Args:
         series:
-        colors: color-scale from the colorlover package. Argument should be taken from available token in cl.flipper(
-        )['seq']
+        colors: color-scale from the colorlover package. Argument should be taken from available
+        token in cl.flipper()['seq']
         **kwargs: keyworded arguments that will be passed yo go.Layout
 
     Returns: go.Figure object that can be displayed, saved, etc
@@ -103,3 +104,43 @@ def pie_chart(series: pd.Series, colors: tuple = ('div', 'RdYlBu'), **kwargs):
                    marker=dict(colors=cl.scales[str(nb_col)][colors[0]][colors[1]], ))
     layout = go.Layout(barmode='stack', **kwargs)
     return go.Figure([trace], layout)
+
+
+def line_chart(df: pd.DataFrame, colors: tuple = ('div', 'RdYlBu'), **kwargs):
+    """
+
+    Args:
+        series: pd.Series
+        colors: color-scale from the colorlover package. Argument should be taken from available
+        token in cl.flipper()['seq']
+        **kwargs: keyworded arguments that will be passed to go.Layout
+
+    Returns: go.Figure object that can be displayed, saved, ect
+
+    """
+    tmp = df.copy()
+    x = list(tmp.index)
+    trace = []
+
+    if len(tmp.columns) >= 3:
+        nb_col = min(len(tmp.columns), 11)
+        i = 0
+    else:
+        nb_col = 3
+        i = -1
+
+    for s in tmp.columns:
+        trace += [go.Scatter(
+            x=x,
+            y=tmp[s].values,
+            name=s,
+            line=dict(color=cl.scales[str(nb_col)][colors[0]][colors[1]][i], )
+        )]
+        if i < 10:
+            i += 1
+        else:
+            i = 0
+
+    layout = go.Layout(**kwargs)
+
+    return go.Figure(trace, layout)

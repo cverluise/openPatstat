@@ -1,6 +1,6 @@
 from google.cloud import bigquery
 
-from open_patstat.utils.gcp import create_table, load_gcs_file
+from open_patstat.utils.gcp import create_table, load_gcs_file, delete_table
 from open_patstat.utils.schema import Schema
 
 client = bigquery.Client()
@@ -69,3 +69,17 @@ job_config.schema = Schema().tls202
 load_gcs_file(client, 'gs://cellar-patstat/tls202_part01.txt', table_ref, job_config)
 load_gcs_file(client, 'gs://cellar-patstat/tls202_part02.txt', table_ref, job_config)
 load_gcs_file(client, 'gs://cellar-patstat/tls202_part03.txt', table_ref, job_config)
+# too many errors when loading all at once ie between 10 and 30 rows raise an issue
+
+# # Create and populate tls202_wordcount
+
+create_table(client,
+             dataset_id='raw',
+             table_id='tls2012_wordcount',
+             schema=Schema().tls2012_wordcount)
+
+table_ref = dataset_ref.table('tls2012_wordcount')
+job_config.schema = Schema().tls2012_wordcount
+job_config.null_marker = 'None'
+load_gcs_file(client, 'gs://cellar-patstat/countWord/fullCW*.txt', table_ref, job_config)
+

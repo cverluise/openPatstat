@@ -62,7 +62,7 @@ def formatCSV(pair):
     :param pair: tuple
     :return: str 
     """
-    return ', '.join(str(p) for p in (pair[0] + (pair[1],)))
+    return ','.join(str(p) for p in (pair[0] + (pair[1],)))
 
 
 PROJECT = 'patstat2016a'
