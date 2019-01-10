@@ -31,8 +31,8 @@ Please, visit our [GitBook][GBOP] for full documentation, examples and resources
 
 Readers interested in the views and plots generated in the course of the Exploratory Data Analysis (`EDA/*.ipynb`) can access them on our dedicated dropbox. 
 
-<p align="center">
-	[![alt text][db-logo]][db]
+
+[![alt text][db-logo]][db]
 
 
 # Installation 
