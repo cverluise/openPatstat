@@ -1,6 +1,6 @@
-#!/usr/bin/env python
-#  coding: utf-8
 import pickle
+import os
+import open_patstat
 
 from IPython.display import display, Markdown, HTML
 
@@ -9,6 +9,7 @@ The purpose of this library is to make access to the documentation of tables and
 easy. In particular from the 
 """
 
+doc_file = os.path.join(open_patstat.__path__[0], 'documentation', 'patstat2016a_doc_api.pickle')
 
 def print_warning():
     display(HTML('<font color=#1F618D>WARNING: completeness is not guaranteed</font>'))
@@ -23,14 +24,13 @@ def print_markdown(obj: dict):
 def print_signature():
     display(Markdown('*{}*'.format(', '.join(ShortDoc().version().values()))))
 
-
 class ShortDoc:
     """
     Class returning the main features of the short doc
     """
 # TODO: solve directory issue for input pickle
     def __init__(self):
-        self.desc = pickle.load(open('open_patstat/patstat2016a_doc_api.pickle', 'rb'))
+        self.desc = pickle.load(open(doc_file, 'rb'))
         self.meta = self.desc['meta']
         self.tables = self.desc['tables']
         self.variables = self.desc['variables']

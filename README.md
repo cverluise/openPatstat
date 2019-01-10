@@ -4,6 +4,8 @@
 [GHOP]:https://github.com/cverluise/openPatstat
 [GBOP]:https://economics-of-innovation-lab.gitbook.io/open-patstat/
 [GBlogo]:https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwi269Gt8vHeAhWMz4UKHRrXAEkQjRx6BAgBEAU&url=https%3A%2F%2Ftwitter.com%2Fgitbookio&psig=AOvVaw3qrY-UcmDrgPTuMh6jGY0b&ust=1543316020829708
+[db-logo]: https://aem.dropbox.com/cms/content/dam/dropbox/www/en-us/branding/app-dropbox-windows@2x.png.transform/half-res/img.png
+[db]:https://www.dropbox.com/sh/b1gs90gtoduu02v/AABICBNYH2kysjX-4JTqee0Wa?dl=0
 
 # Statement
 
@@ -20,9 +22,17 @@ This is also meant to provide a place for sharing codes and good practices. Plea
 
 # Documentation
 
-[![alt text](https://gitlab.com/uploads/-/system/project/avatar/1058960/gitbook.png "Logo Title Text 1")][GBOP]
+[![alt text](https://gitlab.com/uploads/-/system/project/avatar/1058960/gitbook.png "Logo GitBook")][GBOP]
 
 Please, visit our [GitBook][GBOP] for full documentation, examples and resources.   
+
+## Views and Plots
+
+
+Readers interested in the views and plots generated in the course of the Exploratory Data Analysis (`EDA/*.ipynb`) can access them on our dedicated dropbox. 
+
+<p align="center">
+	[![alt text][db-logo]][db]
 
 
 # Installation 
