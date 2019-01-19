@@ -93,9 +93,45 @@ class Schema:
         self.tls2012_wordcount = [
             bigquery.SchemaField('appln_title_lg', STR, NULL, None, ()),
             bigquery.SchemaField('appln_auth', STR, NULL, None, ()),
-            bigquery.SchemaField('year', INT, NULL, None, (),),
+            bigquery.SchemaField('year', INT, NULL, None, (), ),
             bigquery.SchemaField('word', STR, NULL, None, ()),
             bigquery.SchemaField('count', INT, NULL, None, ()),
+        ]
+        self.inv_geo = [
+            bigquery.SchemaField('appln_id', INT, REQ, None, ()),
+            bigquery.SchemaField('patent_office', STR, NULL, None, ()),
+            bigquery.SchemaField('priority_date', DAT, NULL, None, ()),
+            bigquery.SchemaField('name_0', STR, NULL, None, ()),
+            bigquery.SchemaField('name_1', STR, NULL, None, ()),
+            bigquery.SchemaField('name_2', STR, NULL, None, ()),
+            bigquery.SchemaField('name_3', STR, NULL, None, ()),
+            bigquery.SchemaField('name_4', STR, NULL, None, ()),
+            bigquery.SchemaField('name_5', STR, NULL, None, ()),
+            bigquery.SchemaField('city', STR, NULL, None, ()),
+            bigquery.SchemaField('lat', FLO, NULL, None, ()),
+            bigquery.SchemaField('lng', FLO, NULL, None, ()),
+            bigquery.SchemaField('data_source', STR, NULL, None, ()),
+            bigquery.SchemaField('coord_source', STR, NULL, None, ()),
+            bigquery.SchemaField('source', INT, NULL, None, ()),
+            bigquery.SchemaField('priority_year', INT, NULL, None, ())
+        ]
+        self.app_geo = [
+            bigquery.SchemaField('appln_id', INT, REQ, None, ()),
+            bigquery.SchemaField('patent_office', STR, NULL, None, ()),
+            bigquery.SchemaField('priority_date', DAT, NULL, None, ()),
+            bigquery.SchemaField('name_0', STR, NULL, None, ()),
+            bigquery.SchemaField('name_1', STR, NULL, None, ()),
+            bigquery.SchemaField('name_2', STR, NULL, None, ()),
+            bigquery.SchemaField('name_3', STR, NULL, None, ()),
+            bigquery.SchemaField('name_4', STR, NULL, None, ()),
+            bigquery.SchemaField('name_5', STR, NULL, None, ()),
+            bigquery.SchemaField('city', STR, NULL, None, ()),
+            bigquery.SchemaField('lat', FLO, NULL, None, ()),
+            bigquery.SchemaField('lng', FLO, NULL, None, ()),
+            bigquery.SchemaField('data_source', STR, NULL, None, ()),
+            bigquery.SchemaField('coord_source', STR, NULL, None, ()),
+            bigquery.SchemaField('source', INT, NULL, None, ()),
+            bigquery.SchemaField('priority_year', INT, NULL, None, ())
         ]
         self.date_utils = [
             bigquery.SchemaField('date', DAT, NULL, None, ()),

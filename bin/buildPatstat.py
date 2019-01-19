@@ -83,3 +83,26 @@ job_config.schema = Schema().tls2012_wordcount
 job_config.null_marker = 'None'
 load_gcs_file(client, 'gs://cellar-patstat/countWord/fullCW*.txt', table_ref, job_config)
 
+# # Create and populate table inv_geo
+
+create_table(client,
+             dataset_id='raw',
+             table_id='inv_geo',
+             schema=Schema().inv_geo)
+
+table_ref = dataset_ref.table('inv_geo')
+job_config.schema = Schema().inv_geo
+load_gcs_file(client, 'gs://cellar-patstat/geocoding/pf_inv_external_users.csv', table_ref,
+              job_config)
+
+# # Create and populate table app_geo
+
+create_table(client,
+             dataset_id='raw',
+             table_id='app_geo',
+             schema=Schema().app_geo)
+
+table_ref = dataset_ref.table('app_geo')
+job_config.schema = Schema().app_geo
+load_gcs_file(client, 'gs://cellar-patstat/geocoding/pf_app_external_users.csv', table_ref,
+              job_config)

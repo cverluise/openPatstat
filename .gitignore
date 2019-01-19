@@ -7,3 +7,5 @@ ignore/
 **/.DS_Store
 patstat2016a-6f31141aa328.json
 **/__pycache__/
+Open_Patstat.egg-info/
+EDA/tls20167_old.ipynb
